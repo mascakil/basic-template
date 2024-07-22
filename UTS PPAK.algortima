@@ -51,4 +51,32 @@ std::cout: Menampilkan hasil perhitungan ke layar.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+#include <iostream>
+#include <string>
 
+using namespace std;
+
+int main() {
+    string kata = "stikombali";
+    int panjang;
+    string tambahan = kata;
+    cout << "Masukkan panjang data yang diinput: ";
+    cin >> panjang;
+
+    while (kata.length() < panjang) {
+        kata += tambahan;
+    }
+    for (int i = panjang; i > 0; i--) {
+        cout << kata.substr(0, i) << endl;
+    }
+
+    return 0;
+}
+
+Penjelasan perbaikan:
+
+int kata = "stikombali"; diperbaiki menjadi string kata = "stikombali"; karena kata seharusnya adalah string.
+cin<<panjang; diperbaiki menjadi cin >> panjang;.
+cout << kata.susbstr(0, i << endl); diperbaiki menjadi cout << kata.substr(0, i) << endl; karena penulisan substr yang benar.
+Mengubah kata += tambahan; dalam loop while untuk menambahkan tambahan ke kata sampai panjangnya mencapai panjang.
+Menggunakan << dengan benar dalam pernyataan cout untuk menampilkan hasil.
