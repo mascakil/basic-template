@@ -47,3 +47,8 @@ if (value > maxValue) { maxValue = value; }: Memperbarui nilai terbesar jika nil
 if (value < minValue) { minValue = value; }: Memperbarui nilai terkecil jika nilai yang dimasukkan lebih kecil dari nilai terkecil saat ini.
 double average = sum / numValues;: Menghitung rata-rata nilai.
 std::cout: Menampilkan hasil perhitungan ke layar.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
