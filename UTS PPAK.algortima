@@ -1,0 +1,49 @@
+#include <iostream>
+#include <limits>
+
+int main() {
+    int numValues = 20;
+    double value, sum = 0;
+    double maxValue = std::numeric_limits<double>::lowest();
+    double minValue = std::numeric_limits<double>::max();
+
+    for (int i = 0; i < numValues; ++i) {
+        std::cout << "Masukkan nilai ke-" << (i + 1) << ": ";
+        std::cin >> value;
+
+        sum += value;
+
+        if (value > maxValue) {
+            maxValue = value;
+        }
+
+        if (value < minValue) {
+            minValue = value;
+        }
+    }
+
+    double average = sum / numValues;
+
+    std::cout << "Jumlah nilai: " << sum << std::endl;
+    std::cout << "Rata-rata nilai: " << average << std::endl;
+    std::cout << "Nilai terbesar: " << maxValue << std::endl;
+    std::cout << "Nilai terkecil: " << minValue << std::endl;
+
+    return 0;
+}
+
+
+
+Penjelasan singkat mengenai kode di atas:
+
+#include <limits>: Menyertakan pustaka yang digunakan untuk mendapatkan nilai minimum dan maksimum dari tipe data.
+int numValues = 20;: Menentukan jumlah nilai yang akan dimasukkan oleh pengguna.
+double value, sum = 0;: Mendeklarasikan variabel untuk menyimpan nilai sementara dan jumlah nilai.
+double maxValue = std::numeric_limits<double>::lowest();: Mendeklarasikan variabel untuk menyimpan nilai terbesar dengan inisialisasi nilai terendah.
+double minValue = std::numeric_limits<double>::max();: Mendeklarasikan variabel untuk menyimpan nilai terkecil dengan inisialisasi nilai tertinggi.
+Loop for (int i = 0; i < numValues; ++i): Loop sebanyak 20 kali untuk meminta input nilai dari pengguna.
+sum += value;: Menambahkan nilai yang dimasukkan ke dalam total jumlah.
+if (value > maxValue) { maxValue = value; }: Memperbarui nilai terbesar jika nilai yang dimasukkan lebih besar dari nilai terbesar saat ini.
+if (value < minValue) { minValue = value; }: Memperbarui nilai terkecil jika nilai yang dimasukkan lebih kecil dari nilai terkecil saat ini.
+double average = sum / numValues;: Menghitung rata-rata nilai.
+std::cout: Menampilkan hasil perhitungan ke layar.
